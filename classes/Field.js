@@ -1,14 +1,14 @@
 import { Cell } from "./Cell.js";
 
-const _rowsLength = 4;
-const fieldWidth = _rowsLength * _rowsLength;
+const rowsLength = 4;
+const fieldWidth = rowsLength * rowsLength;
 
 export class Field {
   constructor(container) {
     this.cells = [];
     for (let i = 0; i < fieldWidth; i++) {
       this.cells.push(
-        new Cell(container, i % _rowsLength, Math.floor(i / _rowsLength))
+        new Cell(container, i % rowsLength, Math.floor(i / rowsLength))
       );
     }
     this.cellsGroupedByColumn = this.setCellColumn();
